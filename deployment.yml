@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: k8s-test
 spec:
+  replicas: 5
   selector:
     matchLabels:
       app: k8s-test
@@ -17,7 +18,7 @@ spec:
         resources:
           requests:
             memory: "64Mi"
-            cpu: "250m"
+            cpu: "250m"  # четверть 1 cpu
           limits:
             memory: "128Mi"
             cpu: "500m"
